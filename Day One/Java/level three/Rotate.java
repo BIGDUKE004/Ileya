@@ -13,8 +13,6 @@ public class Rotate{
 
     java.util.Scanner input = new java.util.Scanner(System.in);
 
-    //int [] array = {1, -9, 3, 0, 8};
-
     int [] newarray = new int [array.length];
 
    int counter = 0;
