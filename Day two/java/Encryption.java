@@ -39,7 +39,7 @@ public class Encryption{
 
     for(int finalcount = 0; finalcount < user.length; finalcount++){
 
-    char me = (char) (user[finalcount]);
+    char me = (char) user[finalcount];
 
     conversion[firstindex] = me;
 
@@ -48,7 +48,6 @@ public class Encryption{
     }
 
 
-//     int user = (int) userinput;
     System.out.println(Arrays.toString(conversion));    
     
     
