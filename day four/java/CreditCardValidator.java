@@ -32,7 +32,7 @@ public static String cardType(long usernumber){
 
     int counter = 0;
 
-    String user = String.valueOf(usernumber);
+    String user = "" + usernumber;
 
     for(int count = 1; count <= user.length(); count++){
     counter++;
@@ -76,7 +76,7 @@ public static long cardNumber(long usernumber){
     
 public static int cardLength(long usernumber){
 
-    String length = String.valueOf(usernumber);
+    String length = "" + usernumber;
 
     int num = length.length();
 
@@ -90,7 +90,7 @@ public static String cardValidation(long usernumber){
     int firsttotal = 0;
     int secondtotal = 0;
 
-    String length = String.valueOf(usernumber);
+    String length = "" + usernumber;
 
     char [] card = new char[length.length()];
     int [] collector = new int[card.length];
