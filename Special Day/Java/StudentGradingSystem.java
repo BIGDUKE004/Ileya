@@ -113,7 +113,8 @@ public class StudentGradingSystem{
     }
 
 
-    public static void main(String[] args){
+// main method
+public static void main(String[] args){
     Scanner input = new Scanner(System.in);
 
     System.out.print("How many student do you have: ");
@@ -129,6 +130,8 @@ public class StudentGradingSystem{
     float [] average = StudentGradingSystem.getAverageOfScores(total, numOfSubjects);
 
     int [][] sorted = StudentGradingSystem.gettingStudentGrade(total);
+
+//    int [][] subject = StudentGradingSystem.storeScoresOfStudentInAParticularSubject(storage);
 
     System.out.print("\n===========================================================================\n");
 
@@ -164,6 +167,73 @@ public class StudentGradingSystem{
 
     System.out.print("\n===========================================================================\n");
     System.out.print("\n===========================================================================\n");
+
+
+
+
+// second output
+int counter = 1;
+
+    System.out.println();  
+    System.out.println();  
+    System.out.println("SUBJECT SUMMARY");
+    while(counter <= numOfSubjects){
+int largest = 0;
+int lowest =  0;
+int totalScoreOfEachSubject = 0;
+int inside = 0;
+
+System.out.print("\n===========================================================================\n");
+System.out.printf("Subject %d", counter);
+System.out.print("\n===========================================================================\n");
+
+int smallest = storage[0][counter - 1];
+int highest = 0;
+
+for(int count = 0; count < storage.length; count++){
+totalScoreOfEachSubject += storage[count][counter - 1];
+}
+
+for(int large = 0; large < storage.length; large++){
+    if(storage[large][counter - 1] > largest){
+        largest = storage[large][counter - 1];  
+        highest = large;              
+        }
+    }
+
+for(int small = 0; small < storage.length; small++){
+    if(storage[small][counter - 1] < smallest){
+        smallest = storage[small][counter - 1];  
+        lowest = small;              
+        }
+    }
+
+int averageScore = totalScoreOfEachSubject / 2;
+int pass =0;
+int fail = 0;
+
+for(int passmark = 0; passmark < storage.length; passmark++){
+    if(storage[passmark][counter-1] > averageScore){
+        pass++;    
+    } else{
+        fail++;    
+    }
+}
+counter++;
+
+
+System.out.printf("Highest scoring student is: Student %d scoring %d\n", highest+1,largest );
+System.out.printf("Lowest scoring student is: Student %d scoring %d\n", lowest+1,smallest );
+System.out.printf("Total score is: %d\n",totalScoreOfEachSubject);
+System.out.printf("Average score is: %d\n",averageScore);
+System.out.printf("Number of passes: %d\n", pass);
+System.out.printf("Number of fails: %d\n", fail);
+System.out.print("\n===========================================================================\n");
+    
+}
+
+
+// third output
 
     }
 }
