@@ -60,7 +60,7 @@ public class StudentGradingSystem{
 
 
     public static int [] getTotalOfScores(int [] [] storage){
-    
+
     int [] total = new int[storage.length];
 
     for(int count = 0; count < storage.length; count++){

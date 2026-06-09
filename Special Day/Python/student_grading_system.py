@@ -14,12 +14,12 @@
 #//write another function to calculate the both of them
 
 def collectStudentScores(numOfStudent, numOfSubjects):
-    storage = [numOfStudent][numOfSubjects];
+    storage = [][];
     count = 1;
     while(numOfStudent >= count):
         print(f"Entering Score For Student {count}: ")
         counter = 1;
-        while(numOfSubjects >= counter){
+        while(numOfSubjects >= counter):
             score = int(input(f"Entering Score For Subject {counter}: "))
             repeat = 0;
             while(score < 0 or score > 100){
